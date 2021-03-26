@@ -19,7 +19,6 @@ import { SizerComponent } from "./sizer/sizer.component";
 import { ParentComponent } from "./parent/parent.component";
 import { HeroService } from "./hero.service";
 import { BsService } from "./bs.service";
-import { BsComponent } from "./bs/bs.component";
 import { BsPageComponent } from "./bs-page/bs-page.component";
 
 @NgModule({
@@ -50,7 +49,6 @@ import { BsPageComponent } from "./bs-page/bs-page.component";
     ExponentialStrengthPipe,
     SizerComponent,
     ParentComponent,
-    BsComponent,
     BsPageComponent
   ],
   bootstrap: [AppComponent],
