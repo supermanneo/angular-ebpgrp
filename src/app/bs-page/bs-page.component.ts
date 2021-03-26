@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { BsService } from "../bs.service";
-import { MatCardModule } from "@angular/material/card";
 
 @Component({
   selector: "app-bs-page",
