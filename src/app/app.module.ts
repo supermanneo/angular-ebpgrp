@@ -17,6 +17,10 @@ import { HeroBirthday2Component } from "./hero-birthday2/hero-birthday2.componen
 import { ExponentialStrengthPipe } from "./exponential-strength.pipe";
 import { SizerComponent } from "./sizer/sizer.component";
 import { ParentComponent } from "./parent/parent.component";
+import { HeroService } from "./hero.service";
+import { BsService } from "./bs.service";
+import { BsComponent } from "./bs/bs.component";
+import { BsPageComponent } from "./bs-page/bs-page.component";
 
 @NgModule({
   imports: [
@@ -30,7 +34,8 @@ import { ParentComponent } from "./parent/parent.component";
       { path: "cart", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
       { path: "dateformat", component: HeroBirthday2Component },
-      { path: "twoWayBinding", component: ParentComponent }
+      { path: "twoWayBinding", component: ParentComponent },
+      { path: "bs", component: BsPageComponent }
     ])
   ],
   declarations: [
@@ -44,10 +49,12 @@ import { ParentComponent } from "./parent/parent.component";
     HeroBirthday2Component,
     ExponentialStrengthPipe,
     SizerComponent,
-    ParentComponent
+    ParentComponent,
+    BsComponent,
+    BsPageComponent
   ],
   bootstrap: [AppComponent],
-  providers: [CartService]
+  providers: [CartService, HeroService, BsService]
 })
 export class AppModule {}
 
