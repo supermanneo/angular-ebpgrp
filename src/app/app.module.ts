@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
@@ -13,17 +13,24 @@ import { CartComponent } from "./cart/cart.component";
 
 import { HttpClientModule } from "@angular/common/http";
 import { ShippingComponent } from "./shipping/shipping.component";
+import { HeroBirthday2Component } from "./hero-birthday2/hero-birthday2.component";
+import { ExponentialStrengthPipe } from "./exponential-strength.pipe";
+import { SizerComponent } from "./sizer/sizer.component";
+import { ParentComponent } from "./parent/parent.component";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailsComponent },
       { path: "cart", component: CartComponent },
-      { path: "shipping", component: ShippingComponent }
+      { path: "shipping", component: ShippingComponent },
+      { path: "dateformat", component: HeroBirthday2Component },
+      { path: "twoWayBinding", component: ParentComponent }
     ])
   ],
   declarations: [
@@ -33,7 +40,11 @@ import { ShippingComponent } from "./shipping/shipping.component";
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    HeroBirthday2Component,
+    ExponentialStrengthPipe,
+    SizerComponent,
+    ParentComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
