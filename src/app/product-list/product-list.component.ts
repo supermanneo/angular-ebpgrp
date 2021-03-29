@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 
 import { products } from "../products";
+import { LocalStorageService } from "../local-storage.service";
 
 @Component({
   selector: "app-product-list",
@@ -10,8 +11,11 @@ import { products } from "../products";
 export class ProductListComponent {
   products = products;
 
+  constructor(private localStorageService: LocalStorageService) {}
+
   share() {
     window.alert("The product has been shared!");
+    this.localStorageService.set("shared", "mini");
   }
 
   onNotify() {

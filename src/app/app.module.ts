@@ -20,6 +20,7 @@ import { ParentComponent } from "./parent/parent.component";
 import { HeroService } from "./hero.service";
 import { BsService } from "./bs.service";
 import { BsPageComponent } from "./bs-page/bs-page.component";
+import { LocalStorageService } from './local-storage.service';
 
 @NgModule({
   imports: [
@@ -52,7 +53,7 @@ import { BsPageComponent } from "./bs-page/bs-page.component";
     BsPageComponent
   ],
   bootstrap: [AppComponent],
-  providers: [CartService, HeroService, BsService]
+  providers: [CartService, HeroService, BsService, LocalStorageService]
 })
 export class AppModule {}
 
